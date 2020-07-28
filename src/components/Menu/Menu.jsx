@@ -1,7 +1,6 @@
 import React from 'react';
 import Logo from '../../assets/axethings-md.png';
 import './Menu.css';
-import ButtonLink from './components/ButtonLink/ButtonLink';
 import Button from '../Button/Button';
 
 export default () => {
@@ -11,7 +10,7 @@ export default () => {
         <img className="Logo" src={Logo} alt="AxeThings Logo" />
       </a>
       
-      <Button as="a" href="/" className="ButtonLink" textButton="Novo Ví­deo" >
+      <Button as="a" href="/" textButton="Novo Ví­deo" >
         Novo Vídeo
       </Button>
     </nav>
