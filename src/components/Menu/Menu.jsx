@@ -1,16 +1,18 @@
 import React from 'react';
-import Logo from '../../assets/axethings-md.png';
+import { Link } from 'react-router-dom';
 import './Menu.css';
+
+import Logo from '../../assets/axethings-02-md.png';
 import Button from '../Button/Button';
 
 export default () => {
   return (
     <nav className="Menu" >
-      <a href="/" >
+      <Link to="/" >
         <img className="Logo" src={Logo} alt="AxeThings Logo" />
-      </a>
+      </Link>
       
-      <Button as="a" href="/" textButton="Novo Ví­deo" >
+      <Button as={Link} to="/cadastro/video" >
         Novo Vídeo
       </Button>
     </nav>

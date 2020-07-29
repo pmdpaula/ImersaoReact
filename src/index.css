@@ -6,6 +6,7 @@
 
 :root {
   --primary: #36DCB8;
+  --secondary: #ff9100;
   --black: #000000;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
@@ -19,8 +20,30 @@ html,
 body {
   margin: 0;
   padding: 0;
+  /* background: #0d0d0d url('assets/noisy-texture02.png') repeat; */
 }
 
 a {
   color: inherit;
 } 
+
+
+.NotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+@media (max-width: 800px) {
+  .NotFound {
+    max-width: 105px;
+  }
+}
+
+
+#root {
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  background-color: chocolate;
+  display: flex;
+  flex-direction: column;
+}
