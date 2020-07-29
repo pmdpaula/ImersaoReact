@@ -6,9 +6,13 @@ const CadastroCategoria = () => {
   return (
     <div style={{color: "var(--primary)"}}>
       <h1>Cadastro de Vídeo</h1>
+      <form>
+        Nome da Categoria: <input type="text" />
+        <button>Cadastrar</button>
+      </form>
 
-      <Link to="/cadastro/video" >
-        Cadastro de Vídeo
+      <Link to="/" >
+        Ir para home
       </Link>
 
     </div>
