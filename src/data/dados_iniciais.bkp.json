@@ -1,0 +1,227 @@
+{
+  "categorias": [
+    {
+      "titulo": "Front End",
+      "link": "https://www.alura.com.br/formacao-front-end",
+      "cor": "#6BD1FF",
+      "link_extra": {
+        "text": "Formação de Front End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-front-end"
+      },
+      "videos": [
+        {
+          "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+        },
+        {
+          "titulo": "Ambiente de desenvolvimento NodeJS com Docker e Docker Compose",
+          "url": "https://www.youtube.com/watch?v=AVNADGzXrrQ"
+        },
+        {
+          "titulo": "Estrutura de pastas para ReactJS/React Native",
+          "url": "https://www.youtube.com/watch?v=X2RKRKdqqwM"
+        },
+        {
+          "titulo": "React JS Curso Rápido",
+          "url": "https://www.youtube.com/watch?v=XQxitgyZ_S4&t"
+        },
+        {
+          "titulo": "SEO com React",
+          "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+        },
+        {
+          "titulo": "Componentização com VanillaJS #AluraMais",
+          "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+        },
+        {
+          "titulo": "Pare de chutar e aprenda a display: inline #01",
+          "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+        },
+        {
+          "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
+          "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
+        }
+      ]
+    },
+    {
+      "titulo": "Back End",
+      "cor": "#00C86F",
+      "link_extra": {
+        "text": "Cursos de Back End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
+      },
+      "videos": [
+        {
+          "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
+          "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
+        },
+        {
+          "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
+          "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY"
+        },
+        {
+          "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
+          "url": "https://www.youtube.com/watch?v=kjhu1LEmRpY"
+        },
+        {
+          "titulo": "API: Dicionário do Programador",
+          "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
+        }, 
+        {
+          "titulo": "Usando Git Direito",
+          "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
+        }
+      ]
+    },
+    {
+      "titulo": "Data Science e Inteligência Artificial",
+      "cor": "#9cd33b",
+      "link_extra": {
+        "text": "Cursos de Data Science na Alura",
+        "url": "https://www.alura.com.br/formacao-data-science"
+      },
+      "videos": [
+        {
+          "titulo": "Teste de Turing",
+          "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
+        },
+        {
+          "titulo": "O que é Data Science?",
+          "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
+        },
+        {
+          "titulo": "Melhor forma de aprender Python",
+          "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
+        },
+        {
+          "titulo": "Como ingressar no mercado de Data Science?",
+          "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
+        }
+      ]
+    },
+    {
+      "titulo": "Filmes",
+      "cor": "orange",
+      "videos": [
+        {
+          "titulo": "Um Sonho de Liberdade",
+          "url": "https://www.youtube.com/watch?v=v1nZq1vfgSw"
+        },
+        {
+          "titulo": "Interestellar",
+          "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+        },
+        {
+          "titulo": "Relatos Selvagens",
+          "url": "https://www.youtube.com/watch?v=Dgs8d78EKeQ"
+        },
+        {
+          "titulo": "A Chegada",
+          "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
+        },
+        {
+          "titulo": "À Espera de um Milagre",
+          "url": "https://www.youtube.com/watch?v=EIc_wJtm6AU"
+        },
+        {
+          "titulo": "El Secreto de Sus Ojos",
+          "url": "https://www.youtube.com/watch?v=GqdLlefQ8gU"
+        },
+        {
+          "titulo": "IT: A Coisa",
+          "url": "https://www.youtube.com/watch?v=dD264ZjfKlk"
+        },
+        {
+          "titulo": "Coringa",
+          "url": "https://www.youtube.com/watch?v=jfVTJm9NilA"
+        },
+        {
+          "titulo": "Milagre na Cela 7",
+          "url": "https://www.youtube.com/watch?v=kipVc36vCTI"
+        }
+      ]
+    },
+    {
+      "titulo": "Arte em Filmes",
+      "cor": "orange",
+      "videos": [
+        {
+          "titulo": "Especial Quentin Tarantino!",
+          "url": "https://youtu.be/Mm-9Lwqi-Ts"
+        },
+        {
+          "titulo": "Top 10 Melhores Filmes da Década (2010-2019)",
+          "url": "https://youtu.be/qRN6CoQt4G4"
+        },
+        {
+          "titulo": "Top 10 Melhores Diretores de Todos os Tempos",
+          "url": "https://youtu.be/WquiyIcMl7M"
+        }
+      ]
+    },
+    {
+      "titulo": "Games",
+      "cor": "red",
+      "link_extra": {
+        "text": "Jogos que me dão prazer em jogar",
+        "url": "https://imersao-react-alura.vercel.app/"
+      },
+      "videos": [
+        {
+          "titulo": "Civilization VI",
+          "url": "https://www.youtube.com/watch?v=trNUE32O-do"
+        },
+        {
+          "titulo": "Cities Skylines",
+          "url": "https://www.youtube.com/watch?v=TJwzjDAeBj0"
+        },
+        {
+          "titulo": "The Division 2",
+          "url": "https://www.youtube.com/watch?v=TNgnCcLnRYA"
+        },
+        {
+          "titulo": "Oxygen Not Included",
+          "url": "https://www.youtube.com/watch?v=wcLayGm_pM4"
+        },
+        {
+          "titulo": "Watch Dogs 2",
+          "url": "https://www.youtube.com/watch?v=2GIVVsTKTLg"
+        },
+        {
+          "titulo": "Anno 2205",
+          "url": "https://www.youtube.com/watch?v=u0yNjv3L5vM"
+        }
+      ]
+    },
+    {
+      "titulo": "Aprendendo a aprender tecnologia",
+      "cor": "#6b5be2",
+      "link_extra": {
+        "text": "Curso sobre aprendizado na Alura",
+        "url": "https://alura.com.br/curso-online-aprender-a-aprender-tecnicas-para-seu-autodesenvolvimento"
+      },
+      "videos": [
+        {
+          "titulo": "Como estudar melhor?",
+          "url": "https://www.youtube.com/watch?v=Is6c9KSGCbk&feature=youtu.be"
+        },
+        {
+          "titulo": "Faculdade",
+          "url": "https://www.youtube.com/watch?v=jw06H8esyzQ&feature=youtu.be"
+        },
+        {
+          "titulo": "Frameworks",
+          "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+        },
+        {
+          "titulo": "A mágica do Aprendizado",
+          "url": "https://www.youtube.com/watch?v=oTEXzpfEpPY"
+        },
+        {
+          "titulo": "Como aprender a programar?",
+          "url": "https://www.youtube.com/watch?v=MwCx2qKdbDw&feature=youtu.be"
+        }
+      ]
+    }
+  ]
+}
