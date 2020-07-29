@@ -9,9 +9,9 @@ import Button from '../../components/Button/Button';
 
 export default () => (
   <div className="NotFound" >
+    <img src={Opps} className="opps" alt="Not Found" />
 
     <WindupChildren >
-      <img src={Opps} className="opps" alt="Not Found" />
       {"Poxa desculpe. "}
       <Pace getPace={(char) => (char === " " ? 100 : 10)}>
         {"Não encontrei a página procurada."}
