@@ -13,16 +13,16 @@ const ButtonEffect = styled.button`
   /* border: 1px solid rgba(22, 76, 167, 0.6); */
   border: 0px;
   border-radius: 4px;
-  color: ${props => `var(--${props.color})` || "var(--primary)"};
+  color: ${(props) => `var(--${props.color})` || 'var(--primary)'};
   
   /* font-weight: 400; */
   /* font-size: 16px; */
   font-family: inherit;
   z-index: 0;
   overflow: hidden;
-  box-shadow: ${props => props.color === "secondary"
-    ? "0px 0px 3px 1px rgba(255,154,0,0.60)"
-    : "0px 0px 3px 1px rgba(54,220,184,0.60)"
+  box-shadow: ${(props) => (props.color === 'secondary'
+    ? '0px 0px 3px 1px rgba(255,154,0,0.60)'
+    : '0px 0px 3px 1px rgba(54,220,184,0.60)')
 };
 
   & span {
@@ -41,9 +41,9 @@ const ButtonEffect = styled.button`
     width: 0;
     bottom: 0;
     height: 1.5px;
-    background: ${props => props.color === "secondary"
-      ? "var(--secondary)"
-      : "var(--primary)"
+    background: ${(props) => (props.color === 'secondary'
+    ? 'var(--secondary)'
+    : 'var(--primary)')
 };
 
   }
@@ -51,9 +51,9 @@ const ButtonEffect = styled.button`
   
   &:hover {
     cursor: pointer;
-    box-shadow: ${props => props.color === "secondary"
-    ? "0px 0px 3px 1px rgba(255,154,0,0.95)"
-    : "0px 0px 3px 1px rgba(54,220,184,0.95)"};
+    box-shadow: ${(props) => (props.color === 'secondary'
+    ? '0px 0px 3px 1px rgba(255,154,0,0.95)'
+    : '0px 0px 3px 1px rgba(54,220,184,0.95)')};
     /* border-radius: 10px; */
     /* animation: rotate 0.7s ease-in-out both; */
   }
