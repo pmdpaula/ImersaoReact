@@ -29,7 +29,7 @@ a {
 
 #root {
   min-height: calc(100vh - var(--bodyPaddingTop));
-  background-color: chocolate;
+  background-color: black;
   display: flex;
   flex-direction: column;
 }
