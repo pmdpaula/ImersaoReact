@@ -9,7 +9,7 @@ const ButtonEffect = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.dark ? 'black' : 'white'};
+  background-color: ${(props) => (props.bgcolor === 'dark' ? 'black' : 'white')};
   /* border: 1px solid rgba(22, 76, 167, 0.6); */
   border: 0px;
   border-radius: 4px;
@@ -23,7 +23,7 @@ const ButtonEffect = styled.button`
   box-shadow: ${props => props.color === "secondary"
     ? "0px 0px 3px 1px rgba(255,154,0,0.60)"
     : "0px 0px 3px 1px rgba(54,220,184,0.60)"
-  };
+};
 
   & span {
     font-size: 1rem;
@@ -44,7 +44,7 @@ const ButtonEffect = styled.button`
     background: ${props => props.color === "secondary"
       ? "var(--secondary)"
       : "var(--primary)"
-    };
+};
 
   }
 
@@ -66,6 +66,6 @@ const ButtonEffect = styled.button`
   &:hover span {
     animation-delay: 0.06s;
   }
-`
+`;
 
 export default ButtonEffect;
