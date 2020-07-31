@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "nome": "Front End",
+      "description": "Uma categoria maneira",
+      "cor": "36DCB8"
+    },
+    {
+      "id": 2,
+      "nome": "Back End",
+      "description": "Uma categoria maneira",
+      "cor": "36DCB8"
+    },
+    {
+      "id": 3,
+      "nome": "Filmes",
+      "description": "Uma categoria maneira",
+      "cor": "36DCB8"
+    }
+  ]
+}
