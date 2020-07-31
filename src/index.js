@@ -7,8 +7,8 @@ import './index.css';
 
 import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
-import CadastroVideo from './pages/cadastro/Video/Video';
-import CadastroCategoria from './pages/cadastro/Categoria/Categoria';
+import CadastroVideo from './pages/register/Video/Video';
+import CadastroCategoria from './pages/register/Category/Category';
 
 // import Menu from './components/Menu/Menu';
 // import Footer from './components/Footer';
