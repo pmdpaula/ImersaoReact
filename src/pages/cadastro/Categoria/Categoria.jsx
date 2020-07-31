@@ -24,7 +24,9 @@ const CadastroCategoria = () => {
   }
 
   useEffect(() => {
-    const URL_SERVER = 'http://localhost:8080/categories';
+    const URL_SERVER = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categories'
+      : 'https://imersao-react-axethings.herokuapp.com/categories';
 
     fetch(URL_SERVER)
       .then(async (resp) => {
