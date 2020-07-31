@@ -1,6 +1,7 @@
-import React from "react";
-import { useWindupString, CharWrapper } from "windups";
-import styled from "styled-components";
+import React from 'react';
+import { useWindupString, CharWrapper } from 'windups';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 // Our animation CSS. A slow fade in.
 const fadeInAnimationStyle = styled.p`
@@ -18,13 +19,10 @@ const fadeInAnimationStyle = styled.p`
 `;
 
 // A component to wrap around each character.
-const SpookyChar = ({children}) => {
-  return <span className={fadeInAnimationStyle}>{children}</span>
-}
+const SpookyChar = ({ children }) => <span className={fadeInAnimationStyle}>{children}</span>;
 
-
-export default (props) => {
-  const [text] = useWindupString(props.text);
+function WindUpText({ textWind }) {
+  const [text] = useWindupString(textWind);
   return (
     <div>
       <CharWrapper element={SpookyChar}>
@@ -32,6 +30,14 @@ export default (props) => {
       </CharWrapper>
     </div>
   );
+}
+
+SpookyChar.propTypes = {
+  children: PropTypes.element.isRequired,
 };
 
-// export default SpookyChar;
+WindUpText.propTypes = {
+  textWind: PropTypes.string.isRequired,
+};
+
+export default WindUpText;

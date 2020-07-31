@@ -1,8 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import Menu from '../Menu/Menu';
 import Footer from '../Footer';
-
-import styled from 'styled-components';
 
 import bkgImg from '../../assets/noisy-texture02.png';
 
@@ -15,15 +14,16 @@ const Main = styled.main`
   padding-right: 5%;
 `;
 
-export default ({ children }) => {
-
+function PageDefault({ children }) {
   return (
     <>
       <Menu />
-        <Main>
-          {children}
-        </Main>
+      <Main>
+        {children}
+      </Main>
       <Footer />
     </>
-  )
+  );
 }
+
+export default PageDefault;
