@@ -5,7 +5,7 @@ import './Menu.css';
 import Logo from '../../assets/axethings-02-md.png';
 import ButtonEffect from '../ButtonEffect/ButtonEffect';
 
-export default () => (
+const Menu = () => (
   <nav className="Menu">
     <Link to="/">
       <img className="Logo" src={Logo} alt="AxeThings Logo" />
@@ -20,3 +20,5 @@ export default () => (
     </ButtonEffect>
   </nav>
 );
+
+export default Menu;

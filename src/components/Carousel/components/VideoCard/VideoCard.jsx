@@ -1,4 +1,5 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import { VideoCardContainer } from './styles';
 
 function getYouTubeId(youtubeURL) {
@@ -9,8 +10,7 @@ function getYouTubeId(youtubeURL) {
     );
 }
 
-
-function VideoCard({ videoTitle, videoURL, categoryColor }) {
+const VideoCard = ({ videoTitle, videoURL, categoryColor }) => {
   const image = `https://img.youtube.com/vi/${getYouTubeId(videoURL)}/hqdefault.jpg`;
   return (
     <VideoCardContainer
@@ -21,6 +21,12 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
       title={videoTitle}
     />
   );
-}
+};
+
+VideoCard.propTypes = {
+  videoTitle: PropTypes.string.isRequired,
+  videoURL: PropTypes.string.isRequired,
+  categoryColor: PropTypes.string.isRequired,
+};
 
 export default VideoCard;

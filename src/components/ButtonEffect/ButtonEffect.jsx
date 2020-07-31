@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ButtonEffect = styled.button`
   position: relative;
@@ -20,9 +21,10 @@ const ButtonEffect = styled.button`
   font-family: inherit;
   z-index: 0;
   overflow: hidden;
-  box-shadow: ${(props) => (props.color === 'secondary'
-    ? '0px 0px 3px 1px rgba(255,154,0,0.60)'
-    : '0px 0px 3px 1px rgba(54,220,184,0.60)')
+  box-shadow: ${(props) => (
+    props.color === 'secondary'
+      ? '0px 0px 3px 1px rgba(255,154,0,0.60)'
+      : '0px 0px 3px 1px rgba(54,220,184,0.60)')
 };
 
   & span {
@@ -36,16 +38,16 @@ const ButtonEffect = styled.button`
     position: absolute;
     right: 0;
     left: 50%;
-    transition: .3s;
+    transition: .5s;
     content: '';
     width: 0;
     bottom: 0;
-    height: 1.5px;
-    background: ${(props) => (props.color === 'secondary'
-    ? 'var(--secondary)'
-    : 'var(--primary)')
+    height: 2px;
+    background: ${(props) => (
+    props.color === 'secondary'
+      ? 'var(--secondary)'
+      : 'var(--primary)')
 };
-
   }
 
   
@@ -68,5 +70,15 @@ const ButtonEffect = styled.button`
     animation-delay: 0.06s;
   }
 `;
+
+ButtonEffect.defaultProps = {
+  bgcolor: 'dark',
+  color: 'primary',
+};
+
+ButtonEffect.propTypes = {
+  bgcolor: PropTypes.oneOf(['dark', 'light']),
+  color: PropTypes.string,
+};
 
 export default ButtonEffect;

@@ -21,7 +21,7 @@ const fadeInAnimationStyle = styled.p`
 // A component to wrap around each character.
 const SpookyChar = ({ children }) => <span className={fadeInAnimationStyle}>{children}</span>;
 
-function WindUpText({ textWind }) {
+const WindUpText = ({ textWind }) => {
   const [text] = useWindupString(textWind);
   return (
     <div>

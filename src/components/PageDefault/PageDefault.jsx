@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { PropTypes } from 'prop-types';
 import Menu from '../Menu/Menu';
-import Footer from '../Footer';
+import Footer from '../Footer/Footer';
 
 import bkgImg from '../../assets/noisy-texture02.png';
 
@@ -14,16 +15,18 @@ const Main = styled.main`
   padding-right: 5%;
 `;
 
-function PageDefault({ children }) {
-  return (
-    <>
-      <Menu />
-      <Main>
-        {children}
-      </Main>
-      <Footer />
-    </>
-  );
-}
+const PageDefault = ({ children }) => (
+  <>
+    <Menu />
+    <Main>
+      {children}
+    </Main>
+    <Footer />
+  </>
+);
+
+PageDefault.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
 export default PageDefault;

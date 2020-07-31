@@ -4,20 +4,22 @@ import { Pace, WindupChildren } from 'windups';
 import Opps from '../../assets/oppsNadaAqui01.png';
 
 import './NotFound.css';
-import Button from '../../components/Button/Button';
+import ButtonEffect from '../../components/ButtonEffect/ButtonEffect';
 
-export default () => (
+const NotFound = () => (
   <div className="NotFound">
     <img src={Opps} className="opps" alt="Not Found" />
 
     <WindupChildren>
       {'Poxa desculpe. '}
-      <Pace getPace={(char) => (char === ' ' ? 100 : 10)}>
+      <Pace getPace={(char) => (char === ' ' ? 300 : 30)}>
         Não encontrei a página procurada.
       </Pace>
-      <Button as={Link} to="/" style={{ color: 'var(--secondary)' }}>
-        Volte para Home aqui
-      </Button>
+      <ButtonEffect as={Link} to="/" bgcolor="dark" color="secondary">
+        <span>Volte para Home aqui</span>
+      </ButtonEffect>
     </WindupChildren>
   </div>
 );
+
+export default NotFound;
