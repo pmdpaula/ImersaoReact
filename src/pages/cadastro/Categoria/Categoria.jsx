@@ -5,7 +5,7 @@ import ButtonEffect from '../../../components/ButtonEffect/ButtonEffect';
 
 const CadastroCategoria = () => {
   const initialValues = {
-    name: '',
+    title: '',
     description: '',
     color: '',
   };
@@ -41,7 +41,7 @@ const CadastroCategoria = () => {
     <div style={{ color: 'var(--primary)' }}>
       <h1>
         Cadastro de Categoria:
-        {formValues.name}
+        {formValues.title}
       </h1>
       <form onSubmit={(event) => {
         event.preventDefault();
@@ -51,11 +51,11 @@ const CadastroCategoria = () => {
       >
 
         <FormField
-          label="Nome"
+          label="Título"
           type="text"
           // fieldType="input"
-          name="name"
-          value={formValues.name}
+          name="title"
+          value={formValues.title}
           onChange={handleChange}
         />
 
@@ -85,8 +85,8 @@ const CadastroCategoria = () => {
 
       <ul>
         {categories.map((category, index) => (
-          <li key={`${category.name}${String(index)}`}>
-            {category.name}
+          <li key={`${category.title}${String(index)}`}>
+            {category.title}
             --
             {category.description}
             --

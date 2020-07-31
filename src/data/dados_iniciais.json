@@ -1,92 +1,98 @@
 {
   "categorias": [
     {
-      "titulo": "Front End",
+      "title": "Front End",
+      "description": "Desenvolvimento de Front End",
       "link": "https://www.alura.com.br/formacao-front-end",
-      "cor": "#6BD1FF",
+      "color": "#6BD1FF",
       "link_extra": {
         "text": "Formação de Front End na Alura",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       },
       "videos": [
         {
-          "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+          "title": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
           "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
         }
       ]
     },
     {
-      "titulo": "Back End",
-      "cor": "#00C86F",
+      "title": "Back End",
+      "description": "Desenvolvimento de Back End",
+      "color": "#00C86F",
       "link_extra": {
         "text": "Cursos de Back End na Alura",
         "url": "https://www.alura.com.br/cursos-online-programacao"
       },
       "videos": [
         {
-          "titulo": "Usando Git Direito",
+          "title": "Usando Git Direito",
           "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
         }
       ]
     },
     {
-      "titulo": "Data Science e Inteligência Artificial",
-      "cor": "#9cd33b",
+      "title": "Data Science e Inteligência Artificial",
+      "description": "Estudos em Ciência de Dados e AI",
+      "color": "#9cd33b",
       "link_extra": {
         "text": "Cursos de Data Science na Alura",
         "url": "https://www.alura.com.br/formacao-data-science"
       },
       "videos": [
         {
-          "titulo": "Como ingressar no mercado de Data Science?",
+          "title": "Como ingressar no mercado de Data Science?",
           "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
         }
       ]
     },
     {
-      "titulo": "Filmes",
-      "cor": "orange",
+      "title": "Filmes",
+      "description": "Diversos filmes que vi e gostei",
+      "color": "orange",
       "videos": [
         {
-          "titulo": "Milagre na Cela 7",
+          "title": "Milagre na Cela 7",
           "url": "https://www.youtube.com/watch?v=kipVc36vCTI"
         }
       ]
     },
     {
-      "titulo": "Arte em Filmes",
-      "cor": "orange",
+      "title": "Arte em Filmes",
+      "description": "Avaliações e críticas a filmes",
+      "color": "orange",
       "videos": [
         {
-          "titulo": "Top 10 Melhores Diretores de Todos os Tempos",
+          "title": "Top 10 Melhores Diretores de Todos os Tempos",
           "url": "https://youtu.be/WquiyIcMl7M"
         }
       ]
     },
     {
-      "titulo": "Games",
-      "cor": "red",
+      "title": "Games",
+      "description": "Jogos que gosto de jogar. Seus trailers e gameplays",
+      "color": "red",
       "link_extra": {
         "text": "Jogos que me dão prazer em jogar",
         "url": "https://imersao-react-alura.vercel.app/"
       },
       "videos": [
         {
-          "titulo": "Anno 2205",
+          "title": "Anno 2205",
           "url": "https://www.youtube.com/watch?v=u0yNjv3L5vM"
         }
       ]
     },
     {
-      "titulo": "Aprendendo a aprender tecnologia",
-      "cor": "#6b5be2",
+      "title": "Aprendendo a aprender tecnologia",
+      "color": "#6b5be2",
       "link_extra": {
         "text": "Curso sobre aprendizado na Alura",
         "url": "https://alura.com.br/curso-online-aprender-a-aprender-tecnicas-para-seu-autodesenvolvimento"
       },
       "videos": [
         {
-          "titulo": "Como aprender a programar?",
+          "title": "Como aprender a programar?",
           "url": "https://www.youtube.com/watch?v=MwCx2qKdbDw&feature=youtu.be"
         }
       ]

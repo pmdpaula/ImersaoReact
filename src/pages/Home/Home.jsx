@@ -6,7 +6,7 @@ import dadosIniciais from '../../data/dados_iniciais.json';
 const Home = () => (
   <>
     <BannerMain
-      videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
+      videoTitle={dadosIniciais.categorias[0].videos[0].title}
       url={dadosIniciais.categorias[0].videos[0].url}
       videoDescription="O que é Front-End? ..."
     />

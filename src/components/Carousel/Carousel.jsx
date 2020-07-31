@@ -5,8 +5,8 @@ import VideoCard from './components/VideoCard/VideoCard';
 import Slider, { SliderItem } from './components/Slider/Slider';
 
 const Carousel = ({ ignoreFirstVideo, category }) => {
-  const categoryTitle = category.titulo;
-  const categoryColor = category.cor;
+  const categoryTitle = category.title;
+  const categoryColor = category.color;
   const categoryExtraLink = category.link_extra;
   const { videos } = category;
   return (
@@ -31,9 +31,9 @@ const Carousel = ({ ignoreFirstVideo, category }) => {
           }
 
           return (
-            <SliderItem key={video.titulo}>
+            <SliderItem key={video.title}>
               <VideoCard
-                videoTitle={video.titulo}
+                videoTitle={video.title}
                 videoURL={video.url}
                 categoryColor={categoryColor}
               />
@@ -51,6 +51,7 @@ Carousel.defaultProps = {
 
 Carousel.propTypes = {
   ignoreFirstVideo: PropTypes.bool,
+  // eslint-disable-next-line react/forbid-prop-types
   category: PropTypes.object.isRequired,
 };
 
