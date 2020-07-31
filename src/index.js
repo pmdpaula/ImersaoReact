@@ -16,7 +16,7 @@ import PageDefault from './components/PageDefault/PageDefault';
 
 ReactDOM.render(
   <BrowserRouter>
-    <PageDefault>
+    <PageDefault paddingAll={0}>
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/cadastro/video" component={CadastroVideo} />
