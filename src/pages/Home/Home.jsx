@@ -18,14 +18,14 @@ const Home = () => {
   }, []);
 
   const showLoading = () => (
-    <>
+    <div style={{ padding: 'var(--paddingDefault)' }}>
       <p>Carregando...</p>
       <WindupChildren>
         <Pace getPace={(char) => (char === ' ' ? 20 : 5)}>
           Um momentinho e já vamos mostrar um monte das suas coisas legais...
         </Pace>
       </WindupChildren>
-    </>
+    </div>
   );
 
   return (
