@@ -49,7 +49,8 @@ const ButtonEffect = styled.button`
   }
 
   
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     box-shadow: ${(props) => (props.color === 'secondary'
     ? '0px 0px 3px 1px rgba(255,154,0,0.95)'
@@ -58,12 +59,12 @@ const ButtonEffect = styled.button`
     /* animation: rotate 0.7s ease-in-out both; */
   }
 
-  &:hover:after {
+  &:hover:after, &:focus:after {
     left: 0;
     width: 100%;
   }
   
-  &:hover span {
+  &:hover, &:focus span {
     animation-delay: 0.06s;
   }
 `;
