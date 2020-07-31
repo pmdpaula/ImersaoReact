@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField/FormField';
+import ButtonEffect from '../../../components/ButtonEffect/ButtonEffect';
 
 const CadastroCategoria = () => {
   const initialValues = {
@@ -21,6 +22,18 @@ const CadastroCategoria = () => {
     const { name, value } = event.target;
     setValue(name, value);
   }
+
+  useEffect(() => {
+    const URL_SERVER = 'http://localhost:8080/categories';
+
+    fetch(URL_SERVER)
+      .then(async (resp) => {
+        const response = await resp.json();
+        setCategories([
+          ...response,
+        ]);
+      });
+  }, []);
 
   return (
     <div style={{ color: 'var(--primary)' }}>
