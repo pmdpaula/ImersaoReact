@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField/FormField';
 import ButtonEffect from '../../../components/ButtonEffect/ButtonEffect';
+import useForm from '../../../hooks/useForm';
 
 const CadastroCategoria = () => {
   const initialValues = {
@@ -11,17 +12,8 @@ const CadastroCategoria = () => {
   };
 
   const [categories, setCategories] = useState([]);
-  const [formValues, setFormValues] = useState(initialValues);
 
-  function setValue(key, value) {
-    setFormValues({ ...formValues, [key]: value });
-  }
-
-  function handleChange(event) {
-    // console.log(event.target.getAttribute('name'));
-    const { name, value } = event.target;
-    setValue(name, value);
-  }
+  const { formValues, handleChange, clearForm } = useForm(initialValues);
 
   useEffect(() => {
     const URL_SERVER = window.location.hostname.includes('localhost')
@@ -46,7 +38,7 @@ const CadastroCategoria = () => {
       <form onSubmit={(event) => {
         event.preventDefault();
         setCategories([...categories, formValues]);
-        setFormValues(initialValues);
+        clearForm();
       }}
       >
 
