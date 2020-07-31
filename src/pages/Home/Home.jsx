@@ -1,26 +1,65 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { WindupChildren, Pace } from 'windups';
 import BannerMain from '../../components/BannerMain/BannerMain';
 import Carousel from '../../components/Carousel/Carousel';
-import dadosIniciais from '../../data/dados_iniciais.json';
+import categoriesRepository from '../../repositories/categories';
 
-const Home = () => (
-  <>
-    <BannerMain
-      videoTitle={dadosIniciais.categorias[0].videos[0].title}
-      url={dadosIniciais.categorias[0].videos[0].url}
-      videoDescription="O que é Front-End? ..."
-    />
+const Home = () => {
+  const [initialData, setInitialData] = useState([]);
 
-    {
-      dadosIniciais.categorias.map((category, index) => (
-        <Carousel
-          key={String(index)}
-          ignoreFirstVideo={false}
-          category={category}
-        />
-      ))
-      }
-  </>
-);
+  useEffect(() => {
+    categoriesRepository.getAllWithVideos()
+      .then((categoriesWithVideos) => {
+        setInitialData(categoriesWithVideos);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+  const showLoading = () => (
+    <>
+      <p>Carregando...</p>
+      <WindupChildren>
+        <Pace getPace={(char) => (char === ' ' ? 20 : 5)}>
+          Um momentinho e já vamos mostrar um monte das suas coisas legais...
+        </Pace>
+      </WindupChildren>
+    </>
+  );
+
+  return (
+    <>
+
+      {initialData.length === 0 && showLoading()}
+
+      {initialData.map((categoria, indice) => {
+        if (indice === 0) {
+          return (
+            <div key={categoria.id}>
+              <BannerMain
+                videoTitle={initialData[0].videos[0].title}
+                url={initialData[0].videos[0].url}
+                videoDescription={initialData[0].videos[0].description}
+              />
+              <Carousel
+                ignoreFirstVideo
+                category={initialData[0]}
+              />
+            </div>
+          );
+        }
+
+        return (
+          <Carousel
+            key={categoria.id}
+            category={categoria}
+          />
+        );
+      })}
+
+    </>
+  );
+};
 
 export default Home;
