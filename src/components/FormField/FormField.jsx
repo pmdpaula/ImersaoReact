@@ -80,6 +80,7 @@ function FormField(props) {
     name,
     value,
     onChange,
+    suggestions,
   } = props;
 
   const fieldId = `id_${name}`;
@@ -87,6 +88,7 @@ function FormField(props) {
   const tag = isTypeTextarea ? 'textarea' : 'input';
 
   const hasValue = Boolean(value.length);
+  const hasSuggestion = Boolean(suggestions.length);
 
   return (
     <FormFieldWrapper>
@@ -101,10 +103,26 @@ function FormField(props) {
           name={name}
           hasValue={hasValue}
           onChange={onChange}
+          autoComplete={hasSuggestion ? 'off' : 'on'}
+          list={hasSuggestion ? `suggestionFor_${fieldId}` : undefined}
         />
         <Label.Text>
           {label}
         </Label.Text>
+
+        {
+          hasSuggestion && (
+          <datalist id={`suggestionFor_${fieldId}`}>
+            {
+            suggestions.map((suggestion, index) => (
+              <option key={String(index)} value={suggestion}>
+                {suggestion}
+              </option>
+            ))
+          }
+          </datalist>
+          )
+        }
       </Label>
     </FormFieldWrapper>
   );
@@ -114,6 +132,7 @@ FormField.defaultProps = {
   type: 'text',
   value: '',
   onChange: () => {},
+  suggestions: [],
 };
 
 FormField.propTypes = {
@@ -122,6 +141,8 @@ FormField.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string,
   onChange: PropTypes.func,
+  // eslint-disable-next-line react/forbid-prop-types
+  suggestions: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default FormField;

@@ -1,0 +1,4 @@
+.BoxForm {
+  color: var(--primary);
+  padding: var(--paddingDefault);
+}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField/FormField';
 import ButtonEffect from '../../../components/ButtonEffect/ButtonEffect';
 import useForm from '../../../hooks/useForm';
+import categoriesRepository from '../../../repositories/categories';
 
 const CadastroCategoria = () => {
   const initialValues = {
@@ -16,28 +17,27 @@ const CadastroCategoria = () => {
   const { formValues, handleChange, clearForm } = useForm(initialValues);
 
   useEffect(() => {
-    const URL_SERVER = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categories'
-      : 'https://imersao-react-axethings.herokuapp.com/categories';
-
-    fetch(URL_SERVER)
-      .then(async (resp) => {
-        const response = await resp.json();
-        setCategories([
-          ...response,
-        ]);
+    categoriesRepository
+      .getAll()
+      .then((response) => {
+        setCategories(response);
       });
   }, []);
 
   return (
-    <div style={{ color: 'var(--primary)' }}>
+    <div className="BoxForm">
       <h1>
-        Cadastro de Categoria:
-        {formValues.title}
+        {`Cadastro de Categoria: ${formValues.title}`}
       </h1>
       <form onSubmit={(event) => {
         event.preventDefault();
         setCategories([...categories, formValues]);
+
+        categoriesRepository.create({
+          title: formValues.title,
+          description: formValues.description,
+          color: formValues.color,
+        });
         clearForm();
       }}
       >
@@ -45,7 +45,6 @@ const CadastroCategoria = () => {
         <FormField
           label="Título"
           type="text"
-          // fieldType="input"
           name="title"
           value={formValues.title}
           onChange={handleChange}
@@ -54,7 +53,6 @@ const CadastroCategoria = () => {
         <FormField
           label="Descrição"
           type="textarea"
-          // fieldType="textarea"
           name="description"
           value={formValues.description}
           onChange={handleChange}
@@ -63,7 +61,6 @@ const CadastroCategoria = () => {
         <FormField
           label="Cor"
           type="color"
-          // fieldType="input"
           name="color"
           value={formValues.color}
           onChange={handleChange}
